@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 12</title>
+</head>
+<body>
+    <h2>Tabela de Produtos</h2>
+    <table border="1" id="tabela-produtos">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Valor (R$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Caneta</td>
+                <td class="preco">2.50</td>
+            </tr>
+            <tr>
+                <td>Caderno</td>
+                <td class="preco">15.00</td>
+            </tr>
+            <tr>
+                <td>Borracha</td>
+                <td class="preco">1.20</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button>Aumentar Preços em 10%</button>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click", function() {
+        const precos = document.querySelectorAll('.preco');
+        precos.forEach(precoElement => {
+            const valor = parseFloat(precoElement.textContent);
+
+            const novoValor = valor*1.1;
+            
+            precoElement.textContent = novoValor.toFixed(2);
+        })
+    })
+</script>
