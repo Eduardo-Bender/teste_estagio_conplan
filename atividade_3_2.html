@@ -9,7 +9,16 @@
     </body>
 </html>
 <script>
+    const mensagens = [
+                "Escudo impenetrável?",
+                "Traga ele aqui e eu acabo com essa história.",
+                "Posso estar em desvantagem numérica...",
+                "Mas nem mesmo as chances podem ir contra mim!",
+                "Texto original."
+            ];
+    let index = 0;
     document.querySelector("button").addEventListener("click", function() {
-        document.getElementById("mensagem").textContent = "Escudo impenetrável?";
+        document.getElementById("mensagem").textContent = mensagens[index];
+        index = (index + 1) % mensagens.length;
     })
 </script>

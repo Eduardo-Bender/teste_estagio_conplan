@@ -32,7 +32,7 @@
         <button type="submit">Enviar</button>
     </form>
     <?php
-        if(isset($_REQUEST['nota1'])) // so e necessario checar 1 pois ambos sao required
+        if(isset($_REQUEST['nota1']))
         {
             extract($_REQUEST);
 

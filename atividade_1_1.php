@@ -18,14 +18,14 @@
             array("nome" => "Lápis", "preco" => 1.50)
         );
 
+        echo '<h2>Itens abaixo de R$ 50,00:</h2>';
+        echo '<ul>';
         foreach ($produtos as $produto) {
             if ($produto['preco'] < 50) {
-                echo '<div>';
-                echo '<span>' . $produto['nome'] . '</span>';
-                echo ' - <span>R$ ' . number_format($produto['preco'], 2, ',', '.') . '</span>';
-                echo '</div>';
+                echo '<li><pre>' . $produto['nome'] . ' - R$ ' . number_format($produto['preco'], 2, ',', '.') . '</pre></li>';
             }
         }
+        echo '</ul>';
         ?>
     </h1>
 </body>
